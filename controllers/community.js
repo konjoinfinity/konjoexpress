@@ -24,14 +24,6 @@ module.exports = {
       res.render("community/edit", { community });
     });
   },
-
-  /*
-  name: "Express Developers",
-  description: "Meet other express developers",
-  users: [],
-  meets: [],
-  date: Date.now()
-  */
   update: function(req, res) {
     const { name, description } = req.body;
 
