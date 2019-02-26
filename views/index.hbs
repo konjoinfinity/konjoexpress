@@ -1,11 +1,24 @@
-<h1>Konjo</h1>
+<h1>Konjo - Beautiful Communities</h1>
+
 
 {{#if communities}}
     {{#each communities}}
-            {{ name }}
-            {{ description }}
+      <div>
+        <div>
+            <h2>{{ name }}</h2>
+              </div>
+              <div>
+            <h3>{{ description }}</h3>
+            </div>
+            <div>
+            <h4>Members - {{ users }}</h4>
+          </div>
+          <div>
+            <h3>Meets - {{ meets }}</h3>
+            </div>
+            <div>
+            {{ date }}
+            </div>
         </div>
-      </div>
     {{/each}}
-  </ul>
 {{/if}}
