@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 
 app.set("view engine", "hbs");
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(require("./routes/index.js"));
 

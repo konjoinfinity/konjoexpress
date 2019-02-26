@@ -5,6 +5,7 @@ module.exports = {
     res.render("community/new");
   },
   create: function(req, res) {
+    console.log("#", req.body);
     Community.create({
       name: req.body.name,
       description: req.body.description,
@@ -12,12 +13,14 @@ module.exports = {
       meets: req.body.meets,
       date: Date.now()
     }).then(community => {
-      res.redirect(`/community/${community._id}`);
+      //res.redirect(`/community/${community._id}`);
+      console.log(community);
+      res.redirect("/");
     });
   },
   show: function(req, res) {
     Community.findById(req.params.id).then(community => {
-      res.render("community/show", { community });
+      res.render("community/show", community);
     });
   },
   edit: function(req, res) {
