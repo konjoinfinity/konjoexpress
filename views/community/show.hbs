@@ -1,0 +1,16 @@
+<div class="container">
+<h3>{{community.name}}</h3>
+<p>{{community.description}}</p>
+<p>{{community.users}}</p>
+<p>{{community.meets}}</p>
+<p>{{community.date}}</p>
+
+<i class="material-icons">edit</i>
+<button type="button" name="edit"><a href="/community/{{community.id}}/edit">Edit</a></button>
+
+
+<form action="/community/{{community.id}}?_method=DELETE" method="post">
+<i class="material-icons">delete</i>
+  <input type="submit" value="Delete">
+</form>
+</div>
