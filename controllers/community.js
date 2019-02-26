@@ -5,12 +5,11 @@ module.exports = {
     res.render("community/new");
   },
   create: function(req, res) {
-    const { title, description, users, meets } = req.body;
     Community.create({
-      name,
-      description,
-      users,
-      meets,
+      name: req.body.name,
+      description: req.body.description,
+      users: req.body.users,
+      meets: req.body.meets,
       date: Date.now()
     }).then(community => {
       res.redirect(`/community/${community._id}`);
@@ -32,7 +31,7 @@ module.exports = {
     Community.findOneAndUpdate(
       req.params.id,
       {
-        title,
+        name,
         description,
         users,
         meets,

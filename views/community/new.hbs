@@ -1,25 +1,53 @@
-<div class="container">
-<h3>Create a New Community</h3>
 
-<form action="/community" method="post">
-  <p>
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name">
-  </p>
-  <p>
-    <label for="description">Description:</label>
-    <input type="text" name="description" id="description">
-  </p>
-  <p>
-    <label for="users">Users:</label>
-    <input type="text" name="users" id="users">
-  </p>
-  <p>
-    <label for="meets">Meets:</label>
-    <input type="text" name="meets" id="meets">
-  </p>
-  <p>
-    <input type="submit" value="Save" class="btn amber darken-1">
-  </p>
+  <h3>Create a New Community</h3>
+
+<form class="w-full max-w-xs" action="/community" method="post">
+  <div class="md:flex md:items-center mb-6">
+    <div class="md:w-1/3">
+      <label class="block text-grey font-bold md:text-right mb-1 md:mb-0 pr-4" for="name">
+        Name
+      </label>
+    </div>
+    <div class="md:w-2/3">
+      <input class="bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-teal" id="name" type="text" placeholder="Name">
+    </div>
+  </div>
+  <div class="md:flex md:items-center mb-6">
+    <div class="md:w-1/3">
+      <label class="block text-grey font-bold md:text-right mb-1 md:mb-0 pr-4" for="description">
+        Description
+      </label>
+    </div>
+    <div class="md:w-2/3">
+      <input class="bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-teal" id="description" type="text" placeholder="Description">
+    </div>
+  </div>
+  <div class="md:flex md:items-center mb-6">
+    <div class="md:w-1/3">
+      <label class="block text-grey font-bold md:text-right mb-1 md:mb-0 pr-4" for="users">
+        Users
+      </label>
+    </div>
+    <div class="md:w-2/3">
+      <input class="bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-teal" id="users" type="text" placeholder="Users">
+    </div>
+  </div>
+  <div class="md:flex md:items-center mb-6">
+    <div class="md:w-1/3">
+      <label class="block text-grey font-bold md:text-right mb-1 md:mb-0 pr-4" for="meets">
+        Meets
+      </label>
+    </div>
+    <div class="md:w-2/3">
+      <input class="bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-teal" id="meets" type="text" placeholder="Meets">
+    </div>
+  </div>
+  <div class="md:flex md:items-center">
+    <div class="md:w-1/3"></div>
+    <div class="md:w-2/3">
+      <button class="shadow bg-teal hover:bg-teal-light focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
+        Create
+      </button>
+    </div>
+  </div>
 </form>
-</div>
