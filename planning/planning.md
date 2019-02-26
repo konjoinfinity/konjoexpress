@@ -12,3 +12,5 @@ Meet - Create, Read, Update, Delete
 
 Community has to be created by a user.
 Meet can only exist if the community exists, has to be created by a user.
+When a user joins a community, the user is added to the community property
+(users) and the community is added to the user property (communities).
