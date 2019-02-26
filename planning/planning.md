@@ -1,7 +1,7 @@
 Models:
 
 Community - Name, Description, Users(Relate), Meets(Relate)
-User - Username, Password, Communities(relate)
+User - Name, Username, Password, Communities(relate)
 Meet - Name, Description, Location(Address), Time, Date, Community(relate)
 
 CRUD:
