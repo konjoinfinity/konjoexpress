@@ -1,4 +1,7 @@
-const CommunitySchema = new Schema({
+const mongoose = require("../db/connection");
+const Schema = mongoose.Schema;
+
+const Community = new Schema({
   name: String,
   description: String,
   users: [User],
@@ -6,4 +9,6 @@ const CommunitySchema = new Schema({
   date: Date
 });
 
-module.exports = CommunitySchema;
+module.exports = Community;
+
+module.exports = mongoose.model("Community", Community);
