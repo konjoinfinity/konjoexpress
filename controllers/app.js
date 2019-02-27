@@ -5,7 +5,7 @@ module.exports = {
     Community.find({})
       .sort({ createdAt: -1 })
       .then(communities => {
-        console.log(communities);
+        //console.log(communities);
         res.render("index", { communities });
       });
   }

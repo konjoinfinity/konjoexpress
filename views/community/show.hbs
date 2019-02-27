@@ -1,17 +1,28 @@
-<div class="max-w-md w-full lg:flex">
-    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+<div class="max-w-sm rounded overflow-hidden shadow-lg m-5 px-25">
+  <div class="px-6 py-4">
       <div class="mb-8">
-<h3>{{name}}</h3>
-<p>{{description}}</p>
-<p>{{users}}</p>
-<p>{{meets}}</p>
-<p>{{date}}</p>
-
-<form>
-
+<h2>{{name}}</h2>
+</div>
+        <div class="flex items-center p-2">
+          <div class="text-md">
+            <p class="text-black text-base">{{description}}</p>
+          </div>
+      </div>
+      <div class="flex items-center p-2">
+        <div class="text-md">
+          <p class="leading-none">{{users}}</p>
+        </div>
+      </div>
+      <div class="px-10 py-8 mx-auto">
+        <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2 text-center">Meets - {{ meets }}</span>
+      </div>
+      <div class="flex items-center">
+        <div class="text-sm">
+      <p class="text-grey-dark p-2">{{ date }}</p>
+    </div>
+<form class="p-2">
 <button type="button" name="edit" class="border-2 border-grey rounded focus:bg-white focus:border-teal"><a href="/community/{{id}}/edit" class="text-teal" style="text-decoration:none">Edit</a></button>
 </form>
-
 <form action="/community/{{id}}?_method=DELETE" method="post">
   <input type="submit" value="Delete" class="text-teal border-2 border-grey rounded focus:bg-white focus:border-teal">
 </form>

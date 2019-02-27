@@ -27,21 +27,15 @@ module.exports = {
     });
   },
   update: function(req, res) {
-    const { name, description, users, meets } = req.body;
-    Community.findOneAndUpdate(
-      req.params.id,
-      {
-        name,
-        description,
-        users,
-        meets,
-        date: Date.now()
-      },
-      {
-        runValidators: true
-      }
-    )
+    Community.findOneAndUpdate(req.params._id, {
+      name: req.body.name,
+      description: req.body.description,
+      users: req.body.users,
+      meets: req.body.meets,
+      date: Date.now()
+    })
       .then(community => {
+        console.log(community._id);
         res.redirect(`/community/${community._id}`);
         //res.redirect("/");
       })
