@@ -12,8 +12,8 @@ module.exports = {
       meets: req.body.meets,
       date: Date.now()
     }).then(community => {
-      //res.redirect(`/community/${community._id}`);
-      res.redirect("/");
+      res.redirect(`/community/${community._id}`);
+      //res.redirect("/");
     });
   },
   show: function(req, res) {
@@ -27,13 +27,14 @@ module.exports = {
     });
   },
   update: function(req, res) {
+    const { name, description, users, meets } = req.body;
     Community.findOneAndUpdate(
       req.params.id,
       {
-        name: req.body.name,
-        description: req.body.description,
-        users: req.body.users,
-        meets: req.body.meets,
+        name,
+        description,
+        users,
+        meets,
         date: Date.now()
       },
       {
@@ -41,8 +42,8 @@ module.exports = {
       }
     )
       .then(community => {
-        //res.redirect(`/community/${community._id}`);
-        res.redirect("/");
+        res.redirect(`/community/${community._id}`);
+        //res.redirect("/");
       })
       .catch(err => {
         console.log(err);
