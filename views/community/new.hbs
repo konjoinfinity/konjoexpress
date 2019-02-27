@@ -1,31 +1,33 @@
-
-  <h3>Create a New Community</h3>
-
-  <div class="container">
+<div class="max-w-md w-full lg:flex">
+    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
   <h3>Create a New Community</h3>
 
   <form action="/community" method="post">
     <p>
       <label for="name">Name:</label>
-      <input type="text" name="name" id="name">
+      <input type="text" name="name" id="name" class="border-2 border-grey rounded">
     </p>
     <p>
       <label for="description">Description:</label>
-      <input type="text" name="description" id="description">
+      <input type="text" name="description" id="description" class="border-2 border-grey rounded">
     </p>
     <p>
       <label for="users">Users:</label>
-      <input type="text" name="users" id="users">
+      <input type="text" name="users" id="users" class="border-2 border-grey rounded">
     </p>
     <p>
       <label for="meets">Meets:</label>
-      <input type="text" name="meets" id="meets">
+      <input type="text" name="meets" id="meets" class="border-2 border-grey rounded">
     </p>
     <p>
-      <input type="submit" value="Save" class="btn amber darken-1">
+      <input type="submit" value="Create" class="button bg-teal rounded">
     </p>
   </form>
   </div>
+</div>
+</div>
+</div>
 
 <!--
 <form class="w-full max-w-xs" action="/community" method="POST">

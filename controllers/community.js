@@ -5,7 +5,6 @@ module.exports = {
     res.render("community/new");
   },
   create: function(req, res) {
-    console.log("#", req.body);
     Community.create({
       name: req.body.name,
       description: req.body.description,
@@ -14,7 +13,6 @@ module.exports = {
       date: Date.now()
     }).then(community => {
       //res.redirect(`/community/${community._id}`);
-      console.log(community);
       res.redirect("/");
     });
   },
@@ -25,19 +23,17 @@ module.exports = {
   },
   edit: function(req, res) {
     Community.findById(req.params.id).then(community => {
-      res.render("community/edit", { community });
+      res.render("community/edit", community);
     });
   },
   update: function(req, res) {
-    const { name, description, users, meets } = req.body;
-
     Community.findOneAndUpdate(
       req.params.id,
       {
-        name,
-        description,
-        users,
-        meets,
+        name: req.body.name,
+        description: req.body.description,
+        users: req.body.users,
+        meets: req.body.meets,
         date: Date.now()
       },
       {
@@ -45,7 +41,8 @@ module.exports = {
       }
     )
       .then(community => {
-        res.redirect(`/community/${community._id}`);
+        //res.redirect(`/community/${community._id}`);
+        res.redirect("/");
       })
       .catch(err => {
         console.log(err);
