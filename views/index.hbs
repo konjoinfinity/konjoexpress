@@ -1,5 +1,9 @@
 {{#if success}}
-<p class="alert alert-success  p-2 text-green-light">{{success}}</p>
+<div class="bg-green-lightest border border-green-light text-green-dark px-4 py-3 rounded relative" role="alert">
+  <span class="block sm:inline">{{success}}</span>
+  <span class="absolute pin-t pin-b pin-r px-4 py-3">
+  </span>
+</div>
 {{/if}}
 {{#if communities}}
     {{#each communities}}
