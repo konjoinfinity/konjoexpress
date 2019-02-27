@@ -1,21 +1,12 @@
-const { User } = require("../models/index");
-const { Community } = require("../models/index");
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+const passportLocalMongoose = require("passport-local-mongoose");
 
-module.exports = {
-  show: function(req, res) {
-    User.findById(req.params.id).then(user => {
-      res.render("user/show", user);
-    });
-  },
-  new: (req, res) => {
-    res.render("user/new");
-  },
-  create: (req, res) => {
-    User.create({
-      email: req.body.email,
-      password: req.body.password
-    }).then(user => {
-      res.redirect(`/user/${user._id}`);
-    });
-  }
-};
+const User = new Schema({
+  username: String,
+  password: String
+});
+
+User.plugin(passportLocalMongoose);
+
+module.exports = User;
