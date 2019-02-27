@@ -27,21 +27,19 @@ module.exports = {
     });
   },
   update: function(req, res) {
-    Community.findOneAndUpdate(req.params._id, {
-      name: req.body.name,
-      description: req.body.description,
-      users: req.body.users,
-      meets: req.body.meets,
-      date: Date.now()
-    })
-      .then(community => {
-        console.log(community._id);
+    Community.findOne({
+      _id: req.params.id
+    }).then(community => {
+      community.name = req.body.name;
+      community.description = req.body.description;
+      community.users = req.body.users;
+      community.meets = req.body.meets;
+      community.date = Date.now();
+      community.save(err => {
+        if (err) return res.status(500).send(err);
         res.redirect(`/community/${community._id}`);
-        //res.redirect("/");
-      })
-      .catch(err => {
-        console.log(err);
       });
+    });
   },
   delete: function(req, res) {
     Community.remove({ _id: req.params.id }).then(community => {

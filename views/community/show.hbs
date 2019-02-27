@@ -1,9 +1,9 @@
 <div class="max-w-sm rounded overflow-hidden shadow-lg m-5 px-25">
   <div class="px-6 py-4">
       <div class="mb-8">
-<h2 class="text-teal">{{name}}</h2>
+<h2 class="text-purple-light">{{name}}</h2>
 </div>
-<a href="#" style="text-decoration:none" class="inline-block text-sm px-4 py-2 leading-none border rounded text-teal border-teal hover:border-transparent hover:text-white hover:bg-teal mt-4 lg:mt-0">
+<a href="#" style="text-decoration:none" class="inline-block text-sm px-4 py-2 leading-none border rounded text-purple-light border-purple-light hover:border-transparent hover:text-white hover:bg-purple-light mt-4 lg:mt-0">
   Join
 </a>
         <div class="flex items-center p-2">
@@ -24,10 +24,10 @@
       <p class="text-grey-dark p-2">{{ date }}</p>
     </div>
 <form class="p-2">
-<button type="button" name="edit" class="border-2 border-grey rounded focus:bg-white focus:border-teal bg-teal p-1"><a href="/community/{{id}}/edit" class="text-white" style="text-decoration:none">Edit</a></button>
+<button type="button" name="edit" class="border-2 border-grey rounded focus:bg-white focus:border-purple-light bg-purple-light p-1"><a href="/community/{{id}}/edit" class="text-white" style="text-decoration:none">Edit</a></button>
 </form>
 <form action="/community/{{id}}?_method=DELETE" method="post">
-  <input type="submit" value="Delete" class="text-white border-2 border-grey rounded focus:bg-white focus:border-teal p-1 bg-teal">
+  <input type="submit" value="Delete" class="text-white border-2 border-grey rounded focus:bg-white focus:border-purple-light focus:text-purple-light p-1 bg-purple-light">
 </form>
 </div>
 </div>
