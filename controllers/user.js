@@ -2,16 +2,11 @@ const User = require("../models/user");
 const Community = require("../models/community");
 
 module.exports = {
-  // show: (req, res) => {
-  //   User.findOne({ _id: req.params.id })
-  //     .populate({
-  //       path: "tweets",
-  //       options: { limit: 5, sort: { createdAt: -1 } }
-  //     })
-  //     .then(user => {
-  //       res.render("user/show", { user });
-  //     });
-  // },
+  show: (req, res) => {
+    User.findOne({ _id: req.params.id }).then(user => {
+      res.render("user/show", { user });
+    });
+  },
   new: (req, res) => {
     res.render("user/new");
   },
