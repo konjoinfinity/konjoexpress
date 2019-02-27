@@ -10,7 +10,7 @@ module.exports = {
       description: req.body.description,
       location: req.body.location,
       time: req.body.time,
-      date: req.body.time,
+      date: req.body.date,
       community: req.body.community
     }).then(meet => {
       res.redirect(`/meet/${meet._id}`);
