@@ -5,8 +5,8 @@ const Meet = new Schema({
   name: String,
   description: String,
   location: String,
-  time: Time,
-  date: Date,
+  time: String,
+  date: String,
   community: String
 });
 
