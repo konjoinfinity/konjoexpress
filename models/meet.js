@@ -1,10 +1,13 @@
-const MeetSchema = new Schema({
+const mongoose = require("../db/connection");
+const Schema = mongoose.Schema;
+
+const Meet = new Schema({
   name: String,
   description: String,
   location: String,
   time: Time,
   date: Date,
-  community: [Community]
+  community: String
 });
 
-module.exports = MeetSchema;
+module.exports = mongoose.model("Meet", Meet);
