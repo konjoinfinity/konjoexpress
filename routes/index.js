@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Community = require("../models/community");
 const User = require("../models/user");
-const Meet = require("../models/meet");
+const Meet = require("../models/community");
 
 router.use("/", require("./app"));
 router.use("/user", require("./user"));
