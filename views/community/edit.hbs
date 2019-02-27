@@ -1,24 +1,30 @@
+<div class="max-w-md w-full lg:flex">
+    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
 <div class="container">
 <h3>Edit Community</h3>
-<form action="/community/{{community.id}}?_method=PUT" method="post">
+<form action="/community/{{id}}?_method=PUT" method="post">
   <p>
     <label for="name">Name:</label>
-    <input type="text" name="name" id="name" value="{{community.name}}">
+    <input type="text" name="name" id="name" value="{{name}}" class="border-2 border-grey rounded">
   </p>
   <p>
     <label for="description">Description:</label>
-    <input type="text" name="description" id="description" value="{{community.description}}">
+    <input type="text" name="description" id="description" value="{{description}}" class="border-2 border-grey rounded">
   </p>
   <p>
     <label for="users">Users:</label>
-    <input type="text" name="users" id="users" value="{{community.users}}">
+    <input type="text" name="users" id="users" value="{{users}}" class="border-2 border-grey rounded">
   </p>
   <p>
     <label for="meets">Meets:</label>
-    <input type="text" name="meets" id="meets" value="{{community.meets}}">
+    <input type="text" name="meets" id="meets" value="{{meets}}" class="border-2 border-grey rounded">
   </p>
   <p>
-    <input type="submit" value="Save" class="btn amber darken-1">
+    <input type="submit" value="Save" class="button bg-teal rounded">
   </p>
 </form>
+</div>
+</div>
+</div>
 </div>
