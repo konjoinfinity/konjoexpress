@@ -1,13 +1,22 @@
 const express = require("express");
 const router = express.Router();
-// const Community = require("../models/community");
-// const User = require("../models/user");
-// const Meet = require("../models/community");
+const { Community } = require("../models/index");
+const authenticatedUser = require("../auth/authuser");
 
-router.use("/", require("./app"));
-router.use("/user", require("./user"));
-router.use("/community", require("./community"));
-router.use("/meet", require("./meet"));
+router.get("/", authenticatedUser, function(req, res) {
+  Community.find({})
+    .sort({ priority: "asc" })
+    .then(communities => {
+      res.render("index", { communities, success: req.flash("success") });
+    });
+});
+
+router.use(require("./user"));
+
+router.use("/", authenticatedUser, require("./app"));
+router.use("/user", authenticatedUser, require("./user"));
+router.use("/community", authenticatedUser, require("./community"));
+router.use("/meet", authenticatedUser, require("./meet"));
 
 router.all("*", (req, res) => {
   res.status(400).send();
