@@ -1,4 +1,4 @@
-const Meet = require("../models/meet");
+const { Meet } = require("../models/index");
 
 module.exports = {
   new: function(req, res) {

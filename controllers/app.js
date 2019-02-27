@@ -1,4 +1,4 @@
-const Community = require("../models/community");
+const { Community } = require("../models/index");
 
 module.exports = {
   index: (req, res) => {

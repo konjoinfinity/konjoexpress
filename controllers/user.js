@@ -1,5 +1,5 @@
-const User = require("../models/user");
-const Community = require("../models/community");
+const { User } = require("../models/index");
+const { Community } = require("../models/index");
 
 module.exports = {
   show: function(req, res) {

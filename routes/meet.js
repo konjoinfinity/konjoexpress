@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const meetController = require("../controllers/community");
+const meetController = require("../controllers/meet");
 
 router.get("/new", meetController.new);
 router.post("/", meetController.create);

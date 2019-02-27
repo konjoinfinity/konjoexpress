@@ -1,5 +1,6 @@
 const mongoose = require("../db/connection");
 const Schema = mongoose.Schema;
+//const Meet = require("./index");
 
 //Have to add [User] and [Meet] in future.
 
@@ -20,5 +21,5 @@ const Community = new Schema({
   date: Date
 });
 
-module.exports = mongoose.model("Meet", Meet);
-module.exports = mongoose.model("Community", Community);
+// module.exports = mongoose.model("Meet", Meet);
+module.exports = Community;

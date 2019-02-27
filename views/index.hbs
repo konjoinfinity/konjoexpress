@@ -1,45 +1,26 @@
-<!--
-{{#if communities}}
-    {{#each communities}}
-<div class="max-w-md w-full lg:flex mx-auto px-5">
-  <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <div class="text-black font-bold text-xl mb-2"><h3><a href="/community/{{ id }}" class="text-teal">{{name}}</a></h3></div>
-      <p class="text-grey-darker text-base">{{ description }}</p>
-    </div>
-    <div>
-      <p class="text-grey-darker text-base">Members - {{ users }}</p>
-    </div>
-    <div class="flex items-center">
-      <div class="text-md">
-        <p class="text-black leading-none">Meets - {{ meets }}</p>
-        <p class="text-grey-dark">{{ date }}</p>
-      </div>
-    </div>
-  </div>
-</div>
-    {{/each}}
-{{/if}}
--->
+
 {{#if communities}}
     {{#each communities}}
 <div class="max-w-sm rounded overflow-hidden shadow-lg m-5 px-25">
   <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2"><h3><a href="/community/{{ id }}" class="text-purple-light" style="text-decoration:none">{{name}}</a></h3></div>
+    <div class="font-bold text-xl mb-2"><h3><i class="fas fa-link p-1" style="color:#d6bbfc"></i><a href="/community/{{ id }}" class="text-purple-light" style="text-decoration:none">{{name}}</a></h3></div>
     <div class="mb-8">
-      <p class="text-grey-darker text-base">{{ description }}</p>
+
+      <p class="text-grey-darker text-base"><i class="fas fa-info p-1" style="color:#d6bbfc"></i>{{ description }}</p>
     </div>
     <div class="flex items-center">
       <div class="text-md">
-        <p class="text-black leading-none">Members - {{ users }}</p>
+        <p class="text-black leading-none"><i class="fas fa-users p-1" style="color:#d6bbfc"></i> {{ users }}</p>
       </div>
   </div>
-  <div class="px-10 py-8 mx-auto">
-    <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2 text-center">Meets - {{ meets }}</span>
+  <div class="px-10 py-8 mx-auto"> <i class="far fa-calendar-alt p-1" style="color:#d6bbfc"></i>
+    {{#each meets}}
+    <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2 text-center">Meets - {{ name }}</span>
+    {{/each}}
   </div>
   <div class="flex items-center">
     <div class="text-sm">
-  <p class="text-grey-dark">{{ date }}</p>
+  <p class="text-grey-dark"><i class="far fa-clock p-1" style="color:#d6bbfc"></i>{{ date }}</p>
 </div>
 </div>
 </div>
