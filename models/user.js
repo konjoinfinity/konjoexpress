@@ -5,7 +5,7 @@ const User = new Schema({
   name: String,
   username: String,
   password: String,
-  communities: [Community],
+  communities: String,
   date: Date
 });
 

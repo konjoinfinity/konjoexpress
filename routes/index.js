@@ -3,7 +3,7 @@ const router = express.Router();
 const Community = require("../models/community");
 
 router.use("/", require("./app"));
-//router.use("/user", require("./user"));
+router.use("/user", require("./user"));
 router.use("/community", require("./community"));
 
 router.all("*", (req, res) => {
