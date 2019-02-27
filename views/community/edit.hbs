@@ -2,7 +2,7 @@
     <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
       <div class="mb-8">
 <div class="container">
-<h3>Edit Community</h3>
+<h3>Update Community</h3>
 <form action="/community/{{id}}?_method=PUT" method="post">
   <p>
     <label for="name">Name:</label>
@@ -21,7 +21,7 @@
     <input type="text" name="meets" id="meets" value="{{meets}}" class="border-2 border-grey rounded">
   </p>
   <p>
-    <input type="submit" value="Save" class="button bg-teal rounded">
+    <input type="submit" value="Update" class="button bg-teal rounded">
   </p>
 </form>
 </div>

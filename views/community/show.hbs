@@ -7,13 +7,13 @@
 <p>{{meets}}</p>
 <p>{{date}}</p>
 
-<i class="material-icons">edit</i>
-<button type="button" name="edit"><a href="/community/{{id}}/edit">Edit</a></button>
+<form>
 
+<button type="button" name="edit" class="border-2 border-grey rounded focus:bg-white focus:border-teal"><a href="/community/{{id}}/edit" class="text-teal" style="text-decoration:none">Edit</a></button>
+</form>
 
 <form action="/community/{{id}}?_method=DELETE" method="post">
-<i class="material-icons">delete</i>
-  <input type="submit" value="Delete">
+  <input type="submit" value="Delete" class="text-teal border-2 border-grey rounded focus:bg-white focus:border-teal">
 </form>
 </div>
 </div>
