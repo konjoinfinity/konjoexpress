@@ -26,6 +26,13 @@ Community.remove({}).then(function() {
       location: "Clarendon",
       time: "1000",
       date: "030119",
+      community: "Express Developers",
+
+      name: "Learn to code with Express",
+      description: "Learn to Code",
+      location: "Clarendon",
+      time: "1200",
+      date: "030129",
       community: "Express Developers"
     },
     date: Date.now()
