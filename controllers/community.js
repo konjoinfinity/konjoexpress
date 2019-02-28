@@ -9,7 +9,6 @@ module.exports = {
       name: req.body.name,
       description: req.body.description,
       users: req.body.users,
-      meets: req.body.meets,
       date: Date.now()
     }).then(community => {
       res.redirect(`/community/${community._id}`);
@@ -33,7 +32,6 @@ module.exports = {
       community.name = req.body.name;
       community.description = req.body.description;
       community.users = req.body.users;
-      community.meets = req.body.meets;
       community.date = Date.now();
       community.save(err => {
         if (err) return res.status(500).send(err);
