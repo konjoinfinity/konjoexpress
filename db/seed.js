@@ -4,7 +4,7 @@ Community.remove({}).then(function() {
   Community.create({
     name: "DC Runners",
     description: "For people who love to go running in DC",
-    users: "Konjo",
+    users: ["Konjo"],
     meets: {
       name: "Rock Creek Run",
       description: "Trail Running",
@@ -19,7 +19,7 @@ Community.remove({}).then(function() {
   Community.create({
     name: "Express Developers",
     description: "Meet other express developers",
-    users: "Konjo, James, Jim, Julie",
+    users: ["Konjo", "James", "Jim", "Julie"],
     meets: {
       name: "Espresso for Express Devs",
       description: "Code and coffee",
@@ -41,7 +41,7 @@ Community.remove({}).then(function() {
   Community.create({
     name: "Live Music Lovers",
     description: "For people who love live music",
-    users: "Konjo, Ruben, Kelly, Mac, Joy",
+    users: ["Konjo", "Ruben", "Kelly", "Mac", "Joy"],
     meets: {
       name: "John Mayer",
       description: "John Mayer live in concert",
@@ -56,7 +56,7 @@ Community.remove({}).then(function() {
   Community.create({
     name: "Must Love Dogs",
     description: "For people who are die hard dog owners",
-    users: "Konjo, Kelly, Joy",
+    users: [],
     meets: {
       name: "Must love dogs group movie watch",
       description: "Watch must love dogs with other dog lovers",
@@ -71,7 +71,7 @@ Community.remove({}).then(function() {
   Community.create({
     name: "Cats are the Best",
     description: "Cat lovers only!",
-    users: "Kelly, Mac, Joy",
+    users: ["Kelly", "Mac", "Joy"],
     meets: {
       name: "Meet other cat lovers",
       description: "Talk cats with other people",
@@ -87,7 +87,7 @@ Community.remove({}).then(function() {
     name: "Travel Enthusiasts",
     description:
       "For people who can't sit still and love to move across borders",
-    users: "Doug, Ruben, Joy, Michael, Brian",
+    users: ["Doug", "Ruben", "Joy", "Michael", "Brian"],
     meets: {
       name: "Trip to France",
       description: "Tour the southern coast of France",

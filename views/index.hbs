@@ -14,9 +14,12 @@
 
       <p class="text-grey-darker text-base"><i class="fas fa-info p-1" style="color:#d6bbfc"></i>{{ description }}</p>
     </div>
+
     <div class="flex items-center">
       <div class="text-md">
-        <p class="text-black leading-none"><i class="fas fa-users p-1" style="color:#d6bbfc"></i> {{ users }}</p>
+        {{#each users}}
+        <p class="text-black leading-none"><i class="fas fa-users p-1" style="color:#d6bbfc"></i> {{ this }}</p>
+        {{/each}}
       </div>
   </div>
   <div class="px-10 py-8 mx-auto"> <i class="far fa-calendar-alt p-1" style="color:#d6bbfc"></i>

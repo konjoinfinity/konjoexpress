@@ -47,16 +47,13 @@ module.exports = {
   adduser: function(req, res, next) {
     const authUser = req.user.username;
     console.log(authUser);
-    Community.findByIdAndUpdate(
-      { _id: req.params.id },
-      {
-        $push: {
-          users: { authUser } // from your schema, needs to be the Users object ID
-        }
-      },
-      { upsert: true }
-    ).then(list => {
-      res.redirect(`/community/${community._id}`);
+    Community.findOne({ _id: req.params.id }).then(community => {
+      community.users.push(authUser);
+      console.log(community);
+      community.save(err => {
+        if (err) return res.status(500).send(err);
+        res.redirect(`/community/${community._id}`);
+      });
     });
   },
   newMeet: function(req, res) {

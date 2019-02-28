@@ -15,15 +15,16 @@
             <p class="text-black text-base"><i class="fas fa-info p-1" style="color:#d6bbfc"></i>{{description}}</p>
           </div>
       </div>
-      {{#each users}}
+
       <div class="flex items-center p-2">
         <div class="text-md">
-          <p class="leading-none"><i class="fas fa-users p-1" style="color:#d6bbfc"></i>{{users}}</p>
+          {{#each users}}
+          <p class="leading-none"><i class="fas fa-users p-1" style="color:#d6bbfc"></i>{{this}}</p>
+          {{/each}}
         </div>
       </div>
-      {{/each}}
       {{#each meets}}
-      <div class="px-10 py-8 mx-auto"> <i class="far fa-calendar-alt p-1" style="color:#d6bbfc"></i>
+      <div class="mx-auto p-1"> <i class="far fa-calendar-alt p-1" style="color:#d6bbfc"></i>
         <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2 text-center">Next Meet - {{ name }}</span>
       </div>
       {{/each}}
