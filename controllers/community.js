@@ -77,5 +77,8 @@ module.exports = {
     ).then(community => {
       res.redirect(`/community/${community._id}`);
     });
+  },
+  editMeet: function(req, res) {
+    res.render("community/editmeet", { commId: req.params.id });
   }
 };

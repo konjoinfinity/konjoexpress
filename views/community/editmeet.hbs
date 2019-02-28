@@ -1,0 +1,29 @@
+<div class="max-w-sm rounded overflow-hidden shadow-lg m-5 px-25">
+  <div class="px-6 py-4">
+    <div class="mb-8">
+<div class="container">
+<h2 class="p-2 text-purple-light">Update Meet</h2>
+
+<form action="/community/{{commId}}/meet?_method=PUT" method="post">
+  <p class="p-2">
+    <input type="text" name="name" id="name" value="{{meet.name}}" class="border-2 border-grey rounded p-2">
+  </p>
+  <p class="p-2">
+    <input type="text" name="meets" id="meets" value="{{meet.description}}" class="border-2 border-grey rounded p-2">
+  </p>
+  <p class="p-2">
+    <input type="text" name="meets" id="meets" value="{{meet.location}}" class="border-2 border-grey rounded p-2">
+  </p>
+  <p class="p-2">
+    <input type="text" name="meets" id="meets" value="{{meet.time}}" class="border-2 border-grey rounded p-2">
+  </p>
+  <p class="p-2">
+    <input type="text" name="meets" id="meets" value="{{meet.date}}" class="border-2 border-grey rounded p-2">
+  </p>
+  <p class="p-2">
+    <input type="submit" value="Update" class="button bg-purple-light rounded p-2 text-white">
+  </p>
+</form>
+</div>
+</div>
+</div>
