@@ -9,4 +9,9 @@ router.get("/:id/edit", communityController.edit);
 router.put("/:id", communityController.update);
 router.delete("/:id", communityController.delete);
 
+router.put("/:id/add", communityController.adduser);
+
+router.get("/:id/meet/new", communityController.newMeet);
+router.post("/:id/meet", communityController.createMeet);
+
 module.exports = router;

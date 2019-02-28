@@ -3,12 +3,11 @@
       <div class="mb-8">
 <h2 class="text-purple-light">{{name}}</h2>
 </div>
-<i class="fas fa-plus-square p-1" style="color:#d6bbfc"></i>
-<a href="#" style="text-decoration:none" class="inline-block text-sm p-3 leading-none border rounded text-purple-light border-purple-light hover:border-transparent hover:text-white hover:bg-purple-light mt-4 lg:mt-0">
-  Join Community
-</a>
+<form action="/community/{{id}}/add?_method=PUT" method="post" class="p-1"><i class="fas fa-plus-square p-1" style="color:#d6bbfc"></i>
+  <input type="submit" value="Join Community" class="inline-block text-sm p-3 leading-none border rounded text-purple-light border-purple-light hover:border-transparent hover:text-white hover:bg-purple-light mt-4 lg:mt-0">
+</form>
 <i class="fas fa-calendar-plus p-1" style="color:#d6bbfc"></i>
-<a href="/meet/new" style="text-decoration:none" class="inline-block text-sm p-3 leading-none border rounded text-purple-light border-purple-light hover:border-transparent hover:text-white hover:bg-purple-light mt-4 lg:mt-0">
+<a href="/community/{{id}}/meet/new" style="text-decoration:none" class="inline-block text-sm p-3 leading-none border rounded text-purple-light border-purple-light hover:border-transparent hover:text-white hover:bg-purple-light mt-4 lg:mt-0">
   Create Meet
 </a>
         <div class="flex items-center p-2">

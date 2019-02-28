@@ -2,7 +2,7 @@ const { Meet } = require("../models/index");
 
 module.exports = {
   new: function(req, res) {
-    res.render("meet/new");
+    res.render("/meet/new");
   },
   create: function(req, res) {
     Meet.create({

@@ -1,6 +1,5 @@
 const mongoose = require("../db/connection");
 const Schema = mongoose.Schema;
-//const Meet = require("./index");
 
 //Have to add [User] and [Meet] in future.
 
@@ -9,14 +8,17 @@ const Meet = new Schema({
   description: String,
   location: String,
   time: String,
-  date: String,
-  community: String
+  date: String
 });
 
 const Community = new Schema({
   name: String,
   description: String,
-  users: String,
+  users: [
+    {
+      username: []
+    }
+  ],
   meets: [Meet],
   date: Date
 });
