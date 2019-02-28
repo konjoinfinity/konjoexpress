@@ -102,7 +102,16 @@ Community.remove({}).then(function() {
   Community.create({
     name: "Apple Fans",
     description: "Fans of the company Apple and the products they create",
-    users: "Jimmy, John, Kelly, Mac, Joy, Jason, Schmitt, Henry",
+    users: [
+      "Jimmy",
+      "John",
+      "Kelly",
+      "Mac",
+      "Joy",
+      "Jason",
+      "Schmitt",
+      "Henry"
+    ],
     meets: {
       name: "Apple keynoete address",
       description: "Watch the keynote address with other fans",
@@ -117,7 +126,7 @@ Community.remove({}).then(function() {
   Community.create({
     name: "DC Walkers",
     description: "For people who like to walk in the DC area",
-    users: "Matthew, Ruben, Kelly, Mac, Joy, Michelle",
+    users: ["Matthew", "Ruben", "Kelly", "Mac", "Joy", "Michelle"],
     meets: {
       name: "A walk around the mall",
       description: "A group walk around the National Mall",
@@ -133,7 +142,7 @@ Community.remove({}).then(function() {
     name: "Random Activities",
     description:
       "For people who live life outside the box and enjoy doing different things",
-    users: "Konjo, Ruben, Kelly, Mac, Joy, Ethan, Russ",
+    users: ["Konjo", "Ruben", "Kelly", "Mac", "Joy", "Ethan", "Russ"],
     meets: {
       name: "Running and Jumping Jacks",
       description: "Get your heart rate up!",
@@ -148,8 +157,23 @@ Community.remove({}).then(function() {
   Community.create({
     name: "DC Musicians",
     description: "For people who love to play music or sing",
-    users:
-      "Konjo, Ethan, Russ, Alice, Beth, Alison, Doug, Randy, Cathy, Jim, Dru, Ed, Daniel, Diane, Chris",
+    users: [
+      "Konjo",
+      "Ethan",
+      "Russ",
+      "Alice",
+      "Beth",
+      "Alison",
+      "Doug",
+      "Randy",
+      "Cathy",
+      "Jim",
+      "Dru",
+      "Ed",
+      "Daniel",
+      "Diane",
+      "Chris"
+    ],
     meets: {
       name: "Soulfire Practice",
       description: "Band Practice",
