@@ -2,8 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!--Source: https://tailwindcss.com/docs/what-is-tailwind/-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <!--Source: https://fontawesome.com/-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!--Source: https://paulferrett.com/fontawesome-favicon/-->
 <link rel='shortcut icon' type='image/x-icon' href='http://konjotech.com/favicon/favicon-sun-o.ico'/>
     <title>Konjo</title>
   </head>
@@ -40,18 +43,12 @@
     {{{body}}}
     <script type="text/javascript">
     //source: https://mydnic.be/post/responsive-navigation-bar-with-tailwind-css-and-a-drop-of-javascript
-    // Navbar Toggle
 document.addEventListener('DOMContentLoaded', function () {
-// Get all "navbar-burger" elements
 var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-// Check if there are any navbar burgers
 if ($navbarBurgers.length > 0) {
-  // Add a click event on each of them
   $navbarBurgers.forEach(function ($el) {
     $el.addEventListener('click', function () {
-      // Get the "main-nav" element
       var $target = document.getElementById('main-nav');
-      // Toggle the class on "main-nav"
       $target.classList.toggle('hidden');
     });
   });
