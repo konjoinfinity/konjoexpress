@@ -16,25 +16,39 @@ Clone the konjoexpress repository from https://github.com/konjoinfinity/konjoexp
 
 All of the listed dependencies are required to build and run this application. Also a Mac computer with OSX is required to run this project locally.
 
-npm, express, hbs, body-parser, connect-flash, cookie-parser, express-session, handlebars, method-override, mongoose, passport, passport-local, and passport-local-mongoose.
+#### Required NPM Packages
 
-Use the following command to install the dependencies which are in the package.json file.
-
-```
-npm install
-```
+- npm
+- express
+- hbs
+- body-parser
+- connect-flash
+- cookie-parser
+- express-session
+- handlebars
+- method-override
+- mongoose
+- passport
+- passport-local
+- passport-local-mongoose.
 
 Ensure you have mongo installed on your local machine. Use the following guide: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 
-### Installing
-
-After installing the dependencies make sure mongodb is running with the following command:
+Make sure mongodb is running with the following command:
 
 ```
 mongod
 ```
 
 (Leave this terminal window up and running)
+
+### Installing
+
+Use the following command to install the dependencies which are in the package.json file.
+
+```
+npm install
+```
 
 Once mongodb is running, in a new terminal window type the following command to run the localhost server:
 
