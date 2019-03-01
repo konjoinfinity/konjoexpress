@@ -1,5 +1,7 @@
 # Konjo Community
 
+![alt text](http://konjotech.com/community/1.png)
+
 A beautiful app to view, join, and create communities based on shared experience. Once users create an account and are logged in, users can view, create, edit, and delete communities. Once a community has been created, a user can join that community. The user can also create meets for that specific community to include the location, time, and date.
 
 I hope you enjoy the app and create beautiful communities! :-D
