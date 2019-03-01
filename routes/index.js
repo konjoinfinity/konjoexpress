@@ -13,7 +13,6 @@ router.get("/", authenticatedUser, function(req, res) {
 
 router.use(require("./user"));
 
-router.use("/", authenticatedUser, require("./app"));
 router.use("/user", authenticatedUser, require("./user"));
 router.use("/community", authenticatedUser, require("./community"));
 router.use("/meet", authenticatedUser, require("./meet"));
