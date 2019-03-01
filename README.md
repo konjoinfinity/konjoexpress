@@ -6,7 +6,7 @@ I hope you enjoy the app and create beautiful communities! :-D
 
 -Konjo
 
-## Getting Starteds
+## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
@@ -20,11 +20,11 @@ npm, express, hbs, body-parser, connect-flash, cookie-parser, express-session, h
 
 Use the following command to install the dependencies which are in the package.json file.
 
-Ensure you have mongo installed on your local machine. Use the following guide: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
-
 ```
 npm install
 ```
+
+Ensure you have mongo installed on your local machine. Use the following guide: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 
 ### Installing
 
@@ -56,7 +56,7 @@ You can now visit localhost:4000 in your browser to view the app.
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+This app has been deployed to heroku here: https://konjocommunity.herokuapp.com/
 
 ## Built With
 
@@ -73,16 +73,16 @@ If you would like to contribute to this project, submit an issue or a pull reque
 
 ## Future Features
 
-Ability to update community meets.
-Ability to remove users from a community.
-A points feature for every community a user joins, meet they attend, community they create, etc.
-Shared experiences for users - (ex. High School, University, Church, Military, Clubs, Groups)
-Geolocation to view communities nearby.
-Community creator admin and approval process for new members joining.
+- Ability to update community meets.
+- Ability to remove users from a community.
+- A points feature for every community a user joins, meet they attend, community they create, etc.
+- Shared experiences for users - (ex. High School, University, Church, Military, Clubs, Groups)
+- Geolocation to view communities nearby.
+- Community creator admin and approval process for new members joining.
 
 ## Authors
 
-- **Konjo** - _Initial work_ - [konjoinfinity](https://github.com/konjoinfinity)
+- **Konjo** - [konjoinfinity](https://github.com/konjoinfinity)
 
 ## License
 
