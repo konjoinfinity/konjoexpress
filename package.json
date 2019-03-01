@@ -31,7 +31,8 @@
     "mongoose": "^5.4.15",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^5.0.1"
+    "passport-local-mongoose": "^5.0.1",
+    "vue": "^2.6.8"
   },
   "devDependencies": {
     "tailwindcss": "^0.7.4"
