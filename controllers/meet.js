@@ -14,7 +14,6 @@ module.exports = {
       community: req.body.community
     }).then(meet => {
       res.redirect(`/meet/${meet._id}`);
-      //res.redirect("/");
     });
   },
   show: function(req, res) {
@@ -45,7 +44,6 @@ module.exports = {
   },
   delete: function(req, res) {
     Meet.remove({ _id: req.params.id }).then(meet => {
-      console.log(meet);
       res.redirect("/");
     });
   }

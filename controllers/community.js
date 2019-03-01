@@ -12,7 +12,6 @@ module.exports = {
       date: Date.now()
     }).then(community => {
       res.redirect(`/community/${community._id}`);
-      //res.redirect("/");
     });
   },
   show: function(req, res) {
@@ -40,16 +39,13 @@ module.exports = {
   },
   delete: function(req, res) {
     Community.remove({ _id: req.params.id }).then(community => {
-      console.log(community);
       res.redirect("/");
     });
   },
   adduser: function(req, res, next) {
     const authUser = req.user.username;
-    console.log(authUser);
     Community.findOne({ _id: req.params.id }).then(community => {
       community.users.push(authUser);
-      console.log(community);
       community.save(err => {
         if (err) return res.status(500).send(err);
         res.redirect(`/community/${community._id}`);
@@ -67,15 +63,11 @@ module.exports = {
       time: req.body.time,
       date: req.body.date
     };
-    console.log(createMeet);
     Community.findOneAndUpdate(
       { _id: req.params.id },
       { $push: { meets: createMeet } }
     ).then(community => {
       res.redirect(`/community/${community._id}`);
     });
-  },
-  editMeet: function(req, res) {
-    res.render("community/editmeet", { commId: req.params.id });
   }
 };

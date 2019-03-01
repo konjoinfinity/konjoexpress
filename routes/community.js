@@ -13,6 +13,5 @@ router.put("/:id/add", communityController.adduser);
 
 router.get("/:id/meet/new", communityController.newMeet);
 router.post("/:id/meet", communityController.createMeet);
-router.get("/:id/meet/edit", communityController.editMeet);
 
 module.exports = router;
