@@ -82,6 +82,7 @@ This app has been deployed to heroku here: https://konjocommunity.herokuapp.com/
 - [mongodb](https://www.mongodb.com/) - MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need.
 - [express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js.
 - [mongoose](https://mongoosejs.com/) - Elegant mongodb object modeling for node.js.
+- [tailwind css](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom user interfaces.
 
 ## Contributing
 
